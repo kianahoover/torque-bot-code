@@ -1,0 +1,31 @@
+
+#pragma config(Sensor dgtl1, up bump, Sensor touch)
+
+#pragma config(Sensor dgtl2, down bump, Sensor touch)
+
+#pragma config(Sensor dgtl10, up limit, Sensor touch)
+
+#pragma config(Sensor dgtl11, down limit, Sensor touch)
+
+#pragma config (motor, port6, armotor, tmotorVex393 _ MC29, open loop, reversed, encodePort, None)
+
+
+Task Main ()
+
+{
+
+//Loop Forever 
+While 1==1)
+
+{
+
+if(SensorValue (upbump) ==1 && Sensor Value (uplimit) ==0)
+{Motor [armMotor] = 20;}
+
+Else if (Sensor (downbump) ==1 && Sensor Value (downlimit) ==0)
+{Motor [armMotor] = -127;}
+
+Else 
+{Motor [armMotor] = 0;}
+
+} }
